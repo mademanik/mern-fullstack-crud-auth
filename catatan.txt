@@ -1,0 +1,7 @@
+Cloudinary Account :
+email : manikyasa@gmail.com
+user : mademanik
+pass : M@nik260994
+assign cloud name : mademanik
+
+MongoDB Account : login using google account
