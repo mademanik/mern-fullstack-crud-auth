@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { Button, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
-const LandingPage = ({history}) => {
+const LandingPage = ({ history }) => {
+  useEffect(() => {
+    const userInfo = localStorage.getItem("userInfo");
 
-  // useEffect(() => {
-  //   const userInfo = localStorage.getItem("userInfo");
-
-  //   if (userInfo) {
-  //     history.push("/mynotes");
-  //   }
-  // }, [history]);
+    if (userInfo) {
+      history.push("/mynotes");
+    }
+  }, [history]);
 
   return (
     <div className="main">
@@ -22,19 +22,23 @@ const LandingPage = ({history}) => {
               <p className="subtitle"> One Safe place for all your notes.</p>
             </div>
             <div className="buttonContainer">
-              <a href="/login">
-                <Button size="lg" className="landingbutton">
-                  Login
-                </Button>
+              <a>
+                <Link to="/login">
+                  <Button size="lg" className="landingbutton">
+                    Login
+                  </Button>
+                </Link>
               </a>
-              <a href="/register">
-                <Button
-                  size="lg"
-                  className="landingbutton"
-                  variant="outline-primary"
-                >
-                  Signup
-                </Button>
+              <a>
+                <Link to="/register">
+                  <Button
+                    size="lg"
+                    className="landingbutton"
+                    variant="outline-primary"
+                  >
+                    Signup
+                  </Button>
+                </Link>
               </a>
             </div>
           </div>
