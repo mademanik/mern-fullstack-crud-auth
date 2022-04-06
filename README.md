@@ -1,2 +1,2 @@
 # mern-fullstack-crud-auth
- learn mern fullstack
+ Deploy app and demo, please go to : https://notemademanik-mern.herokuapp.com/
